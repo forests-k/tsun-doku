@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  client:
+    build: ./tsundocku-client
+    container_name: tsundocku-client
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    volumes:
+      - ./tsundocku-client:/app
+    tty: true
+    stdin_open: true
